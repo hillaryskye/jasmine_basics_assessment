@@ -41,15 +41,15 @@ medianScore: function(values) {
   modeScore: function mode(arr) {
     var numMapping = {};
     var greatestFreq = 0;
-    var mode;
+    var modeNum;
     arr.forEach(function findMode(number) {
         numMapping[number] = (numMapping[number] || 0) + 1; // Places the array indexes in an object
                                                             // adds the next index into the object
         if (greatestFreq < numMapping[number]) {
             greatestFreq = numMapping[number];
-            mode =+ number; // Returns the frequency of the array item
+            modeNum =+ number; // Returns the frequency of the array item
         }
     });
-    return mode;
+    return modeNum;
     }
 };
